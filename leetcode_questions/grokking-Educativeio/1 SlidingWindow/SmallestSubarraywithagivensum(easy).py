@@ -26,25 +26,25 @@ Once all the elements are complete you will get your answer.
 '''
 
 class Solution(object):
-    def SmallestSubarray(self, input, S):
-        beg = end = 0
-        length = len(input)
-        smallest_subarray = length + 1
-        if length == 0: return 0
-        if input[beg] >= S:
-            return 1
-        sum = input[beg]
-        while beg < length or end < length:
-            if sum < S and end+1 < length:
-                end += 1
-                sum += input[end]
-            elif sum >= S and beg < length:
-                temp_val = end - beg + 1
-                if (temp_val) < smallest_subarray: smallest_subarray = temp_val
-                sum -= input[beg]
-                beg += 1
-            else:
-                return smallest_subarray if smallest_subarray != length + 1 else 0
+        def SmallestSubarray(self, input, S):
+            beg = end = 0
+            length = len(input)
+            smallest_subarray = length + 1
+            if length == 0: return 0
+            if input[beg] >= S:
+                return 1
+            sum = input[beg]
+            while beg < length or end < length:
+                if sum < S and end+1 < length:
+                    end += 1
+                    sum += input[end]
+                elif sum >= S and beg < length:
+                    temp_val = end - beg + 1
+                    if (temp_val) < smallest_subarray: smallest_subarray = temp_val
+                    sum -= input[beg]
+                    beg += 1
+                else:
+                    return smallest_subarray if smallest_subarray != length + 1 else 0
 
 
 s = Solution()

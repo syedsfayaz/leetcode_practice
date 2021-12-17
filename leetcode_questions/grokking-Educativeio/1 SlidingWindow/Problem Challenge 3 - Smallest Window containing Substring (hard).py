@@ -5,6 +5,9 @@ Given a string and a pattern, find the smallest substring in the given string wh
 Example 1:
 Input: String="aabdec", Pattern="abc"
 Output: "abdec"
+pattern = (a, b, c)
+
+
 Explanation: The smallest substring having all characters of the pattern is "abdec"
 Example 2:
 Input: String="abdabca", Pattern="abc"

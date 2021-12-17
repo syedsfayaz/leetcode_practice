@@ -22,18 +22,34 @@ class Solution():
         #unique.add(s[0])
         final = 0
         beg, end = 0, 0
-        for index, value in enumerate(s):
-            if value not in unique:
-                unique.add(value)
+
+        # for index, value in enumerate(s):
+        #         #         #     if value not in unique:
+        #         #         #         unique.add(value)
+        #         #         #     else:
+        #         #         #         while value in unique:
+        #         #         #             unique.remove(s[beg])
+        #         #         #             beg += 1
+        #         #         #         unique.add(value)
+        #         #         #     length = index - beg + 1
+        #         #         #     if length > final:
+        #         #         #         final = length
+        #         #         # return final
+        if len(s) == 1: return 1
+        while end < len(s) - 1 and beg < len(s):
+            if end < len(s) -1 and s[end] not in unique:
+                unique.add(s[end])
+                temp = end - beg + 1
+                final = max(final, temp)
+                end += 1
             else:
-                while value in unique:
+                while s[end] in unique and beg < len(s) - 1:
                     unique.remove(s[beg])
                     beg += 1
-                unique.add(value)
-            length = index - beg + 1
-            if length > final:
-                final = length
         return final
+
+
+
 
 s = Solution()
 print(s.NoRepeatingSubString("aabccbb"))

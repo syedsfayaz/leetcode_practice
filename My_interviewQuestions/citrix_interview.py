@@ -12,6 +12,7 @@ def json_out():
 
 def parse_results():
     json_output = json_out()
+
     final_result = []
     for data in json_output:
         # result = '{} - {} - {}'.format(data['name'],data['phone'],data['address']['street'])
@@ -20,11 +21,12 @@ def parse_results():
     #return (final_result)
         geo_output = 'geo: {0}, {1}'.format(data['address']['geo']['lat'],data['address']['geo']['lng']) #+ '\n'#['geo']#['lat'] + ',' + data['geo']['lng']
         #data =
-        print('{0}\n{1}\n'.format(result,geo_output))
+       # print('{0}\n{1}\n'.format(result,geo_output))
 
 
 s = json_out()
-print(json.dumps(s, indent=2))
+# print(s)
+# print(json.dumps(s, indent=2))
 parse_results()
 #print(sorted(s))
 # for i in s:

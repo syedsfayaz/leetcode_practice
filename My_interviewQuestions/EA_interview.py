@@ -49,8 +49,8 @@ print((os.getcwd()))
 #os.removedirs('xyz\yzx')
 # os.chdir('C:\')
 #print(os.listdir())
-modifiedtime = os.stat('EA_interview.py').st_mtime
-print(datetime.fromtimestamp(modifiedtime))
+# modifiedtime = os.stat('EA_interview.py').st_mtime
+# print(datetime.fromtimestamp(modifiedtime))
 
 # for dirpath, dirnames, filenames in os.walk(os.getcwd()):
 #     print(dirpath,dirnames,filenames)
@@ -64,35 +64,35 @@ print(datetime.fromtimestamp(modifiedtime))
 # print(os.path.splitext('text.txt'))
 
 # import sys
-# #print(sys.path)
+# print(sys.path)
 # # sys.stderr.write('test\n')
 # # sys.stderr.flush()
 # # sys.stdout.write('this is sysout\n')
 # print(sys.argv)
 
 
-import requests
-
-r = requests.get('https://imgs.xkcd.com/comics/python.png')
-#response = r.status_code()
-#print(r.content)
-print(r.headers)
-# with open('comic.png', 'wb') as f:
-#     f.write(r.content)
-
-#args = {'page': 2, 'count': 25}
-args = {'username': 'corey', 'password': 'testing'}
-#r = requests.get('https://httpbin.org/get', params=args)
-r = requests.post('https://httpbin.org/post', data=args)
-
-r_dict = r.json()
-print(r_dict['form'])
-
-
-names = ['Corey', 'Fayaz', 'Dave']
-
-for index, name in enumerate(names, start=1):
-    print(index, name)
+# import requests
+#
+# r = requests.get('https://imgs.xkcd.com/comics/python.png')
+# #response = r.status_code()
+# #print(r.content)
+# print(r.headers)
+# # with open('comic.png', 'wb') as f:
+# #     f.write(r.content)
+#
+# #args = {'page': 2, 'count': 25}
+# args = {'username': 'corey', 'password': 'testing'}
+# #r = requests.get('https://httpbin.org/get', params=args)
+# r = requests.post('https://httpbin.org/post', data=args)
+#
+# r_dict = r.json()
+# print(r_dict['form'])
+#
+#
+# names = ['Corey', 'Fayaz', 'Dave']
+#
+# for index, name in enumerate(names, start=1):
+#     print(index, name)
 
 # names = ['Peter', 'clake', 'wade']
 # heros = ['spider', 'super', 'deadpool']
@@ -106,10 +106,10 @@ for index, name in enumerate(names, start=1):
 # print(c)
 
 # print(datetime.today())
-
-import  json
-
-data = json.loads(string)
+#
+# import  json
+#
+# data = json.loads(string)
 
 
 

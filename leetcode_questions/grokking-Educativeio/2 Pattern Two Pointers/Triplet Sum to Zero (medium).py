@@ -55,7 +55,7 @@ class Solution():
 
 
 s = Solution()
-#print(s.search_triplets([-3, 0, 1, 2, -1, 1, -2]))
-print(s.search_triplets([0, 0, 0]))
+print(s.search_triplets([-3, 0, 1, 2, -1, 1, -2]))
+#print(s.search_triplets([0, 0, 0]))
 #print(s.search_triplets([-5, 2, -1, -2, 3]))
 
