@@ -34,25 +34,49 @@ for i in s:
 #"aabccbb"
 
 
+# class Solution():
+#     def LongestSubstringSameLetters(self, s, k):
+#         beg = 0
+#         dict_val = {}
+#         result = 0
+#         temp = 0
+#         for index, value in enumerate(s):
+#             if value in dict_val:
+#                 dict_val[value] += 1
+#             elif value not in dict_val:
+#                 dict_val[value] = 1
+#             temp = max(temp, dict_val[value])
+#             if index - beg + 1 - temp > k:
+#                 dict_val[s[beg]] -= 1
+#                 beg += 1
+#
+#             if index - beg + 1 > result:
+#                 result = index - beg + 1
+#         return result
+
 class Solution():
     def LongestSubstringSameLetters(self, s, k):
-        beg = 0
-        dict_val = {}
-        result = 0
-        temp = 0
-        for index, value in enumerate(s):
-            if value in dict_val:
-                dict_val[value] += 1
-            elif value not in dict_val:
-                dict_val[value] = 1
-            temp = max(temp, dict_val[value])
-            if index - beg + 1 - temp > k:
-                dict_val[s[beg]] -= 1
-                beg += 1
+        dict_fre = {}
+        left, right, max_len = 0,0,0
+        for right, value in enumerate(s):
+            if value not in dict_fre:
+                dict_fre[value] = 0
+            dict_fre[value] += 1
 
-            if index - beg + 1 > result:
-                result = index - beg + 1
-        return result
+            while len(dict_fre) > k+1:
+                  dict_fre[left] -= 1
+                  if dict_fre[left] == 0:
+                      del dict_fre[left]
+                  left += 1
+            max_len = max(max_len, right - left + 1)
+        return max_len
+
+
+
+
+
+
+
 
 # class Solution():
 #     def LongestSubstringSameLetters(self, str, k):

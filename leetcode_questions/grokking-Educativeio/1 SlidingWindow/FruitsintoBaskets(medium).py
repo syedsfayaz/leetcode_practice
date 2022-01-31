@@ -39,26 +39,25 @@ This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
 from collections import defaultdict
 
 
-class Solution():
-    def FruitsinBasket(self, Fruit):
-        dist_Fruits = {}#defaultdict(int)
-        count = 0
-        Max_sum = Sum = 0
-        left = right = 0
-        for right, f in enumerate(Fruit):
-            #print(f)
-            if f not in dist_Fruits:
-                dist_Fruits[f] = 1
-            else:
-                dist_Fruits[f] += 1
-            while len(dist_Fruits) > 2:
-                dist_Fruits[Fruit[left]] -= 1
-                if dist_Fruits[Fruit[left]] == 0:
-                    del dist_Fruits[Fruit[left]]
-                left += 1
-            Max_sum = max(Max_sum, right - left + 1)
-        return Max_sum
-
+# class Solution():
+#     def FruitsinBasket(self, Fruit):
+#         dist_Fruits = {}#defaultdict(int)
+#         count = 0
+#         Max_sum = Sum = 0
+#         left = right = 0
+#         for right, f in enumerate(Fruit):
+#             #print(f)
+#             if f not in dist_Fruits:
+#                 dist_Fruits[f] = 1
+#             else:
+#                 dist_Fruits[f] += 1
+#             while len(dist_Fruits) > 2:
+#                 dist_Fruits[Fruit[left]] -= 1
+#                 if dist_Fruits[Fruit[left]] == 0:
+#                     del dist_Fruits[Fruit[left]]
+#                 left += 1
+#             Max_sum = max(Max_sum, right - left + 1)
+#         return Max_sum
 
 
 s = Solution()

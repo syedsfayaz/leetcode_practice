@@ -1,4 +1,5 @@
 import requests
+from pprint import pprint
 import json
 def json_out():
     #payload = {'user':fsayyed, 'password': secret}
@@ -8,7 +9,10 @@ def json_out():
     json_formatted = output.json()
     # with open('json.txt', 'w') as f:
     #     f.write(json_formatted)
+    pprint(json_formatted)
     return (json_formatted)
+
+
 
 def parse_results():
     json_output = json_out()
