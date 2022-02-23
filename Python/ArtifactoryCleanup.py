@@ -3,7 +3,7 @@ import json
 import re
 
 repository = "https://artifactory.amerhonda.com/artifactory"
-auth = ("fayaz sayyed", "AKCp8ihVmzmPpLoGP18VxbCd5S4GC5nwFMPrwaurj68s8uJNXUgedAGq2DhtWEEnQNYSBT2de")
+auth = ("fayaz sayyed", "")
 headers = {'content-type': 'text/plain'}
 
 ''' Get a list of all Helm repositories in Artifactory'''
