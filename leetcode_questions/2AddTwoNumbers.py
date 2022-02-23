@@ -31,7 +31,7 @@ class Solution(object):
             if l1 or l2:
                 v1 = l1.val if l1 else 0
                 v2 = l2.val if l2 else 0
-                result = v1 + v2 +  carry
+                result = v1 + v2 + carry
                 cur.next = ListNode(result % 10)
                 carry = result // 10
                 cur = cur.next

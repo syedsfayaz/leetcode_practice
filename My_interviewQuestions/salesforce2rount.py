@@ -16,7 +16,8 @@ def mergeOverlappingIntervals(intervals):
     if len(intervals) == 0:
         return None
     output = []
-    temp_sort = sorted(intervals)
+    temp_sort = sorted(intervals, key=lambda item:item[0])
+    print(temp_sort)
     for items in temp_sort:
         if output and items[0] <= output[-1][1]:
             output[-1][1] = items[0]
